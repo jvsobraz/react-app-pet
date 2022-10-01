@@ -1,6 +1,7 @@
-import React from React
+import React from "react"
 
-export default function PetCadastro(props){
+ const PetCadastro = (props) => {
+    return(
     <>
         <div>Informações</div>
         <h2>Nome:</h2>
@@ -11,6 +12,8 @@ export default function PetCadastro(props){
         <h2>Telefone do Dono:</h2>
         <h2>Imagem do Pet:</h2>
         <h2>Obserfações:</h2>
-    
     </>
+    )
 }
+
+export default PetCadastro;

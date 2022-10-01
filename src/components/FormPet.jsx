@@ -1,6 +1,7 @@
-function PetForm() {
+import React from "react"
+
+const PetForm = () => {
     return (
-        
         <form>
              <input class="nome" type="text" placeholder="Insira o nome do pet"/>
              <input class="idade" type="number" placeholder="Insira a idade do pet"/> 
@@ -16,4 +17,4 @@ function PetForm() {
     )
 }
 
-export default PetForm
+export default PetForm;
