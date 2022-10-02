@@ -3,18 +3,32 @@ import PetCadastro from "./PetCadastro";
 
 const PetForm = () => {
   const [nome, setNome] = useState("");
-  const [idade, setIdade] = useState("");
+  const [idade, setIdade] = useState();
   const [raca, setRaca] = useState("");
-  const [tamanho, setTamanho] = useState("");
+  const [tamanho, setTamanho] = useState();
   const [nomeDono, setNomeDono] = useState("");
-  const [telefone, setTelefone] = useState("");
-  const [imagem, setImagem] = useState("");
+  const [telefone, setTelefone] = useState();
+  const [imagem, setImagem] = useState();
   const [observacoes, setObservacoes] = useState("");
+
+  const [novoPet, setNovoPet] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submit");
+    const newObject = {
+      nome: nome,
+      idade: idade,
+      raca: raca,
+      tamanho: tamanho,
+      nomeDono: nomeDono,
+      telefone: telefone,
+      imagem: imagem,
+      observacoes: observacoes,
+    };
+    setNovoPet([newObject, ...novoPet]);
   };
+
+  console.log(novoPet);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -82,17 +96,20 @@ const PetForm = () => {
           onChange={(e) => setObservacoes(e.target.value)}
         />
       </label>
-      <input type="submit" value="Cadastrar" />
-      <PetCadastro
-        nome={nome}
-        idade={idade}
-        raca={raca}
-        tamanho={tamanho}
-        nomeDono={nomeDono}
-        telefone={telefone}
-        imagem={imagem}
-        observacoes={observacoes}
-      />
+      <button type="submit" value="Cadastrar" />
+
+      {novoPet.map((pet) => (
+        <PetCadastro
+          nome={pet.nome}
+          idade={pet.idade}
+          raca={pet.raca}
+          tamanho={pet.tamanho}
+          nomeDono={pet.nomeDono}
+          telefone={pet.telefone}
+          imagem={pet.imagem}
+          observacoes={pet.observacoes}
+        />
+      ))}
     </form>
   );
 };
