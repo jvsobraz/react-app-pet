@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-
+font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -18,14 +18,30 @@ export const Container = styled.div`
                 input[type="file"]{
                     padding:0.3rem;
                     background-color:#fff;
+                    font-family: 'Courier New', Courier, monospace;
                     
                 }
                 input:hover{
                     background-color:#eff2d5;
                 }
-               
+                
+
+                }
+                
             }
+            button{
+                padding:0.3rem 1rem;
+                border: 1px solid;
+                border-radius: 1rem;
+                background-color: #fff;
+                transition: 0.2s background-color;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size:1rem;
             
+        }
+        button:hover{
+        background-color:#eff2d5;
         }
 `;
 
