@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import PetCadastro from "./PetCadastro";
+import { Container } from "../style/styled";
+import { FormularioEstilizado } from "../style/styled";
+import { Ficha } from "../style/styled";
 
 const PetForm = () => {
   const [nome, setNome] = useState("");
@@ -29,7 +32,9 @@ const PetForm = () => {
   };
 
   return (
+    <Container>
     <form onSubmit={handleSubmit}>
+      <FormularioEstilizado>
       <label>
         Nome:
         <input
@@ -95,7 +100,8 @@ const PetForm = () => {
         />
       </label>
       <button type="submit" value="Cadastrar" />
-
+      </FormularioEstilizado>
+      <Ficha>
       {novoPet.map((pet) => (
         <PetCadastro
           nome={pet.nome}
@@ -108,7 +114,9 @@ const PetForm = () => {
           observacoes={pet.observacoes}
         />
       ))}
+      </Ficha>
     </form>
+    </Container>
   );
 };
 
