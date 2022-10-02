@@ -3,14 +3,14 @@ import React from "react";
 const PetCadastro = (props) => {
   return (
     <>
-      <h2>Nome: {props.nome}</h2>
-      <h2>Idade: {props.idade}</h2>
-      <h2>Raça: {props.raca}</h2>
-      <h2>Tamanho: {props.tamanho}</h2>
-      <h2>Nome do Dono: {props.nomeDono}</h2>
-      <h2>Telefone do Dono: {props.telefone}</h2>
-      <h2>Imagem do Pet: {props.imagem}</h2>
-      <h2>Obserfações: {props.observacoes}</h2>
+      <h2>Nome: <span>{props.nome}</span></h2>
+      <h2>Idade: <span>{props.idade}</span></h2>
+      <h2>Raça: <span>{props.raca}</span></h2>
+      <h2>Tamanho: <span>{props.tamanho}</span></h2>
+      <h2>Nome do Dono: <span>{props.nomeDono}</span></h2>
+      <h2>Telefone do Dono: <span>{props.telefone}</span></h2>
+      <h2>Imagem do Pet: <span>{props.imagem}</span></h2>
+      <h2>Observações: <span>{props.observacoes}</span></h2>
     </>
   );
 };

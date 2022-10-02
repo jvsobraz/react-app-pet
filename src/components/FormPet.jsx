@@ -34,7 +34,9 @@ const PetForm = () => {
   return (
     <Container>
     <form onSubmit={handleSubmit}>
+    
       <FormularioEstilizado>
+      <h1>Dados do Pet</h1>
       <label>
         Nome:
         <input
@@ -99,10 +101,11 @@ const PetForm = () => {
           onChange={(e) => setObservacoes(e.target.value)}
         />
       </label>
-      <button type="submit" value="Cadastrar" />
+      <button type="submit" value="Cadastrar">Cadastrar</button>
       </FormularioEstilizado>
-      <Ficha>
+      
       {novoPet.map((pet) => (
+        <Ficha>
         <PetCadastro
           nome={pet.nome}
           idade={pet.idade}
@@ -113,8 +116,9 @@ const PetForm = () => {
           imagem={pet.imagem}
           observacoes={pet.observacoes}
         />
+        </Ficha>
       ))}
-      </Ficha>
+      
     </form>
     </Container>
   );
