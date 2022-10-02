@@ -28,8 +28,6 @@ const PetForm = () => {
     setNovoPet([newObject, ...novoPet]);
   };
 
-  console.log(novoPet);
-
   return (
     <form onSubmit={handleSubmit}>
       <label>
