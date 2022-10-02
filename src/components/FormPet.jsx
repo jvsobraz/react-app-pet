@@ -36,7 +36,7 @@ const PetForm = () => {
         Nome:
         <input
           type="text"
-          value={nome}
+          name="nome"
           onChange={(e) => setNome(e.target.value)}
         />
       </label>
@@ -44,7 +44,7 @@ const PetForm = () => {
         Idade:
         <input
           type="number"
-          value={idade}
+          name="idade"
           onChange={(e) => setIdade(e.target.value)}
         />
       </label>
@@ -52,7 +52,7 @@ const PetForm = () => {
         Raça:
         <input
           type="text"
-          value={raca}
+          name="raca"
           onChange={(e) => setRaca(e.target.value)}
         />
       </label>
@@ -60,7 +60,7 @@ const PetForm = () => {
         Tamanho:
         <input
           type="number"
-          value={tamanho}
+          name="tamanho"
           onChange={(e) => setTamanho(e.target.value)}
         />
       </label>
@@ -68,7 +68,7 @@ const PetForm = () => {
         Nome do dono:
         <input
           type="text"
-          value={nomeDono}
+          name="nomeDono"
           onChange={(e) => setNomeDono(e.target.value)}
         />
       </label>
@@ -76,7 +76,7 @@ const PetForm = () => {
         Telefone do dono:
         <input
           type="tel"
-          value={telefone}
+          name="telefone"
           onChange={(e) => setTelefone(e.target.value)}
         />
       </label>
@@ -84,7 +84,7 @@ const PetForm = () => {
         Imagem:
         <input
           type="file"
-          value={imagem}
+          name="imagem"
           onChange={(e) => setImagem(e.target.value)}
         />
       </label>
@@ -92,7 +92,7 @@ const PetForm = () => {
         Observações:
         <input
           type="text"
-          value={observacoes}
+          name="observacoes"
           onChange={(e) => setObservacoes(e.target.value)}
         />
       </label>
