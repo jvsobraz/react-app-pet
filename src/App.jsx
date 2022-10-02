@@ -4,7 +4,6 @@ import PetForm from "./components/FormPet";
 const App = () => {
   return (
     <>
-      
       <PetForm />
     </>
   );

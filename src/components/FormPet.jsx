@@ -33,93 +33,93 @@ const PetForm = () => {
 
   return (
     <Container>
-    <form onSubmit={handleSubmit}>
-    
-      <FormularioEstilizado>
-      <h1>Dados do Pet</h1>
-      <label>
-        Nome:
-        <input
-          type="text"
-          name="nome"
-          onChange={(e) => setNome(e.target.value)}
-        />
-      </label>
-      <label>
-        Idade:
-        <input
-          type="number"
-          name="idade"
-          onChange={(e) => setIdade(e.target.value)}
-        />
-      </label>
-      <label>
-        Raça:
-        <input
-          type="text"
-          name="raca"
-          onChange={(e) => setRaca(e.target.value)}
-        />
-      </label>
-      <label>
-        Tamanho:
-        <input
-          type="number"
-          name="tamanho"
-          onChange={(e) => setTamanho(e.target.value)}
-        />
-      </label>
-      <label>
-        Nome do dono:
-        <input
-          type="text"
-          name="nomeDono"
-          onChange={(e) => setNomeDono(e.target.value)}
-        />
-      </label>
-      <label>
-        Telefone do dono:
-        <input
-          type="tel"
-          name="telefone"
-          onChange={(e) => setTelefone(e.target.value)}
-        />
-      </label>
-      <label>
-        Imagem:
-        <input
-          type="file"
-          name="imagem"
-          onChange={(e) => setImagem(e.target.value)}
-        />
-      </label>
-      <label>
-        Observações:
-        <input
-          type="text"
-          name="observacoes"
-          onChange={(e) => setObservacoes(e.target.value)}
-        />
-      </label>
-      <button type="submit" value="Cadastrar">Cadastrar</button>
-      </FormularioEstilizado>
-      
-      {novoPet.map((pet) => (
-        <Ficha>
-        <PetCadastro
-          nome={pet.nome}
-          idade={pet.idade}
-          raca={pet.raca}
-          tamanho={pet.tamanho}
-          nomeDono={pet.nomeDono}
-          telefone={pet.telefone}
-          imagem={pet.imagem}
-          observacoes={pet.observacoes}
-        />
-        </Ficha>
-      ))}
-      
-    </form>
+      <form onSubmit={handleSubmit}>
+        <FormularioEstilizado>
+          <h1>Dados do Pet</h1>
+          <label>
+            Nome:
+            <input
+              type="text"
+              name="nome"
+              onChange={(e) => setNome(e.target.value)}
+            />
+          </label>
+          <label>
+            Idade:
+            <input
+              type="number"
+              name="idade"
+              onChange={(e) => setIdade(e.target.value)}
+            />
+          </label>
+          <label>
+            Raça:
+            <input
+              type="text"
+              name="raca"
+              onChange={(e) => setRaca(e.target.value)}
+            />
+          </label>
+          <label>
+            Tamanho:
+            <input
+              type="number"
+              name="tamanho"
+              onChange={(e) => setTamanho(e.target.value)}
+            />
+          </label>
+          <label>
+            Nome do dono:
+            <input
+              type="text"
+              name="nomeDono"
+              onChange={(e) => setNomeDono(e.target.value)}
+            />
+          </label>
+          <label>
+            Telefone do dono:
+            <input
+              type="tel"
+              name="telefone"
+              onChange={(e) => setTelefone(e.target.value)}
+            />
+          </label>
+          <label>
+            Imagem:
+            <input
+              type="file"
+              name="imagem"
+              onChange={(e) => setImagem(e.target.value)}
+            />
+          </label>
+          <label>
+            Observações:
+            <input
+              type="text"
+              name="observacoes"
+              onChange={(e) => setObservacoes(e.target.value)}
+            />
+          </label>
+          <button type="submit" value="Cadastrar">
+            Cadastrar
+          </button>
+        </FormularioEstilizado>
+
+        {novoPet.map((pet) => (
+          <Ficha>
+            <PetCadastro
+              nome={pet.nome}
+              idade={pet.idade}
+              raca={pet.raca}
+              tamanho={pet.tamanho}
+              nomeDono={pet.nomeDono}
+              telefone={pet.telefone}
+              imagem={pet.imagem}
+              observacoes={pet.observacoes}
+            />
+          </Ficha>
+        ))}
+      </form>
     </Container>
   );
 };
